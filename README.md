@@ -2,11 +2,11 @@
 
 `reference_signal`은 Loran-c signal을 기반으로 하는 Loran-c chain들의 reference 신호들을 생성하는 기능을 가진 API이다. API에 사용된 라이브러리는 `numpy`만이 사용되었다.(`matplotlib`또한 로드 되지만, '데이터 중간 확인용'으로 사용되었고, proto-type 버전 이후 삭제 될 예정) 본 API에서 사용되는 Loran-c는 아래의 그림과 같으며, 이를 활용하여 reference signal을 생성한다. 본 API는 크게 다음의 기능을 가진다.  
 
-<center><img src='./image/loran-c.png' width="60%"></center>
+<center><img src='./image/loran-c.png' width="100%"></center>
 
 
 ## gen_master_signal(phase_code, **kwargs)
----
+
 - Details
     -  **Loran-c chain에서 주국(master station)에서 전송하는 Loran-c reference signal을 생성하는 함수이다.**
 
@@ -40,7 +40,7 @@ timespace, master_window, master_window_e = rs.gen_master_signal()
 ```
 
 - Exmaple; Plot result : Default
-<center><img src='./image/master_reference_signal_default.png' width="75%"></center>
+<center><img src='./image/master_reference_signal_default.png' width="100%"></center>
 
 - Example; with `phase_code=['+', '+', '-', '-', '+', '-', '+', '-', 'dummy', '+']`
 ```python
@@ -53,7 +53,7 @@ timespace, master_window, master_window_e = rs.gen_master_signal(phase_code=pc)
 ```
 
 - Example; plot result : with GRI-A Master Phase code
-<center><img src='./image/master_reference_signal_phase_code.png' width="75%"></center>
+<center><img src='./image/master_reference_signal_phase_code.png' width="100%"></center>
 
 
 
@@ -88,7 +88,7 @@ plt.show()
 ```
 
 ## gen_slave_signal(phase_code, **kwargs)
----
+
 - Details
     - **Loran-c chain에서 주국(master station)에서 전송하는 Loran-c reference signal을 생성하는 함수이다.**
 
@@ -121,7 +121,7 @@ timespace, slave_window, slave_window_e = rs.gen_master_signal()
 ```
 
 - Example; plot result : Default
-<center><img src='./image/slave_reference_signal_default.png' width="75%"></center>
+<center><img src='./image/slave_reference_signal_default.png' width="100%"></center>
 
 
 - Example; with `phase_code=['+', '+', '+', '+', '+', '-', '-', '+']`
@@ -136,7 +136,7 @@ timespace, master_window, master_window_e = rs.gen_master_signal(phase_code=pc)
 
 
 - Example; plot result : with GRI-A Slave Phase code
-<center><img src='./image/slave_reference_signal_phase_code.png' width="75%"></center>
+<center><img src='./image/slave_reference_signal_phase_code.png' width="100%"></center>
 
 
 - Plot code(Default)
@@ -164,7 +164,7 @@ plt.show()
 
 
 ## gen_ref_window_by_id(id, amp_ratio)
----
+
 - Details
     - **Loran-c chain 의 reference signal을 생성하는 함수이다.**
 
@@ -250,7 +250,7 @@ timespace, signal, signal_e, id_chain = rs.gen_ref_window_by_id(id=9930)
 ```
 - Example; Plot result : 9930 chain
 
-<center><img src='./image/9930_reference_chain.png' width="75%"></center>
+<center><img src='./image/9930_reference_chain.png' width="100%"></center>
 
 
 - Example; 8390
@@ -261,7 +261,7 @@ timespace, signal, signal_e, id_chian = rs.gen_ref_window_by_id(id=8390)
 ```
 
 - Exmaple; Plot reuslt : 8390 chain
-<center><img src='./image/8390_reference_chain.png' width="75%"></center>
+<center><img src='./image/8390_reference_chain.png' width="100%"></center>
 
 
 - Example; 7430
@@ -272,7 +272,8 @@ timespace, signal, signal_e, id_chian = rs.gen_ref_window_by_id(id=7430)
 ```
 
 - Exmaple; Plot reuslt : 7430 chain
-<center><img src='./image/7430_reference_chain.png' width="75%"></center>
+
+<center><img src='./image/7430_reference_chain.png' width="100%"></center>
 
 - Plot code : 9930 chain
 ```python
